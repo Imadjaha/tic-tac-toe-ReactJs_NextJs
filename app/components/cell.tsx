@@ -41,9 +41,9 @@ const Cell = ({
   const handleCellChange = (cellToChange: string) => {
     let copyCells = [...cells];
     // copyCells[id] = cellToChange;
-    // setCells(copyCells);
-    copyCells[id] = cellToChange;
-    setCells(copyCells.filter((cell) => cell !== undefined && cell !== null));
+    copyCells[id] = cellToChange as "" | "circle" | "cross";
+
+    setCells(copyCells);
   };
   return (
     <div className="square" onClick={handleClick}>
