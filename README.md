@@ -1,1 +1,1 @@
-# tic-tac-toe-ReactJs_NextJs
+# tic-tac-toe-ReactJs
