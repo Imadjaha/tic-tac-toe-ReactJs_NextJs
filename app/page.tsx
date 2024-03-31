@@ -14,14 +14,19 @@ const winningCombos = [
 ];
 
 export default function Home() {
-  const [cells, setCells] = useState(["", "", "", "", "", "", "", "", ""]);
+  // const [cells, setCells] = useState(["", "", "", "", "", "", "", "", ""]);
+  
+
   const [go, setGo] = useState("circle");
   const [winningMessage, setWinningMessage] = useState("");
   const turnStyle = { fontWeight: "bold", fontSize: "30px", marginTop: "50px" };
   const winsStyle = { fontWeight: "bold", fontSize: "30px", marginTop: "50px" };
 
 // Define initialCells
-const initialCells = ["", "", "", "", "", "", "", "", ""];
+// const initialCells = ["", "", "", "", "", "", "", "", ""];
+const initialCells: ("" | "circle" | "cross")[] = ["", "", "", "", "", "", "", "", ""];
+const [cells, setCells] = useState(initialCells);
+
 
   useEffect(() => {
     winningCombos.forEach((combo) => {
