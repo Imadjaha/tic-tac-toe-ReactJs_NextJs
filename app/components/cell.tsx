@@ -40,8 +40,10 @@ const Cell = ({
 
   const handleCellChange = (cellToChange: string) => {
     let copyCells = [...cells];
+    // copyCells[id] = cellToChange;
+    // setCells(copyCells);
     copyCells[id] = cellToChange;
-    setCells(copyCells);
+    setCells(copyCells.filter((cell) => cell !== undefined && cell !== null));
   };
   return (
     <div className="square" onClick={handleClick}>
